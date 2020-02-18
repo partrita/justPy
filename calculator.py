@@ -1,4 +1,3 @@
-
 from justpy import Div, Input, Button, WebPage, justpy
 
 class Calculator(Div):

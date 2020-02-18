@@ -8,9 +8,12 @@ async def my_input(self, msg):
 
 async def input_demo(request):
     wp = jp.WebPage()
-    in1 = jp.Input(a=wp, classes=input_classes, placeholder='Please type here')
-    in1.div = jp.Div(text='What you type will show, 입력하는 것이 보여집니다.', classes=p_classes, a=wp)
-    in1.on('input', my_input)
+    wp.title='input demo'
+    wp.favicon='./favicon.ico'
+    wp.debug=True
+    in2 = jp.Input(a=wp, classes=input_classes, placeholder='Please type here')
+    in2.div = jp.Div(text='What you type will show, 입력하는 것이 보여집니다.', classes=p_classes, a=wp)
+    in2.on('input', my_input)
     return wp
 
 jp.justpy(input_demo)
